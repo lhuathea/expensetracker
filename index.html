@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <header>
+    <h2>WELCOME TO EXPENSE TRACKER</h2>
+  </header>
+
+  <form id="createExpense" data-aos="fade-down" >
+    <input type="date" name="date" id="date">
+    <input type="text" name="name" id="name" placeholder="enter the name of expense">
+    <input type="text" name="amount" id="amount" placeholder="enter the amount of expense">
+    <select name="category" id="category">
+      <option value="">select a category of expense</option>
+      <option value="food">food</option>
+      <option value="entertainment">entertainment</option>
+      <option value="study">study</option>
+      <option value="health">health</option>
+      <option value="other">other</option>
+    </select>
+    <button type="submit" id="addExpenseBtn">Add Expense</button>
+  </form>
+  
+  <div class="wrapper">
+    <div class="expenseItem">
+      <p>Date</p>
+      <h4>Name</h4>
+      <p>Amount</p>
+      <p id="tag">Category</p>
+      <div class="btnGroup">
+        <button class="btn" id="editBtn">Edit</button>
+        <button class="btn" id="deleteBtn">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <div data-aos="fade-down">
+    <canvas id="myChart"></canvas>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="index.js"></script>
+  <script>
+    AOS.init({
+      delay: 500,
+      duration: 1000,
+    });
+  </script>
+</body>
+</html>
